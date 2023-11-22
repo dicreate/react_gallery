@@ -5,9 +5,10 @@ import style from './index.module.scss'
 interface PreviewGalleryProps extends CommonClassProps {
    activePhotoIndex: number;
    photos: Photo[];
+   setNewPhoto: (id: number) => void;
 }
 
-export const PreviewGallery: React.FC<PreviewGalleryProps> = ({ activePhotoIndex, photos, className }) => {
+export const PreviewGallery: React.FC<PreviewGalleryProps> = ({ activePhotoIndex, photos, className, setNewPhoto }) => {
    const previewContainer = useRef<HTMLUListElement>(null);
 
    useEffect(() => {
@@ -25,20 +26,25 @@ export const PreviewGallery: React.FC<PreviewGalleryProps> = ({ activePhotoIndex
              ref={previewContainer}
           >
              {
-                photos.map((photo) => (
+                photos.map((photo, id) => (
                    <li
                       key={photo.id}
-                      className={style.previewGalleryPreview}
                    >
-                      <img
-                         src={photo.preview}
-                         alt={photo.description}
-                         className={style.previewGalleryImage} />
+                     <button
+                         className={style.previewGalleryPreview}
+                         onClick={() => setNewPhoto(id)}
+                     >
+                        <img
+                           src={photo.preview}
+                           alt={photo.description}
+                           className={style.previewGalleryImage} 
+                        />
+                     </button>
                    </li>
                 ))
              }
           </ul>
-         ),[photos])
+         ),[photos, setNewPhoto])
          }
          <div className={style.previewGalleryCover}>
             {activePhotoIndex + 1} / {photos.length}

@@ -44,6 +44,7 @@ export const Gallery: React.FC<GalleryProps> = ({ photos }) => {
             activePhotoIndex={indexActivePhoto}
             photos={photos}
             className={style.galleryPreviewList}
+            setNewPhoto={setIndexActivePhoto}
          />
       </div>
    )
