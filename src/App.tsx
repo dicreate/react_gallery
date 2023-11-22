@@ -1,10 +1,21 @@
+import { Gallery } from "./Components/Gallery";
+
 function App() {
 
   return (
     <>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, rem dolorum magni earum rerum neque expedita iste alias, quis distinctio odio ad dolores veritatis obcaecati iure illo voluptas nisi, soluta reprehenderit accusantium. Magni vitae nisi recusandae beatae ut, iure quo quos. Odio maxime, nesciunt laboriosam aperiam iste reiciendis. Maiores pariatur alias tempore? Iure exercitationem vel, expedita impedit blanditiis nesciunt, excepturi incidunt rerum neque debitis architecto deleniti explicabo perspiciatis minima fugit! Ad iure iste repellendus animi in ratione nam cum porro ipsum, eaque quidem quisquam voluptas hic culpa praesentium! Dolor nemo voluptatem quis aut a rem accusamus hic itaque fugiat explicabo nobis, officia odio modi cum quaerat recusandae distinctio obcaecati inventore culpa commodi aliquam ullam voluptatum! Qui a sit ducimus tenetur cumque soluta ex? Quod quia nesciunt voluptatem rem, molestias quam. Repellendus nihil quia vel, atque, totam minima at ducimus delectus exercitationem, aliquam beatae ipsa illum debitis animi quam aspernatur in officiis amet error pariatur sit veniam provident. Et laudantium sit eius cupiditate placeat natus! Nobis, doloribus voluptatum tenetur nulla similique, recusandae voluptas repellendus libero temporibus dolore minima ipsum nisi aut illo ex? Modi veritatis consectetur, nisi hic, possimus rem nesciunt reiciendis eius explicabo asperiores, ipsa tenetur in animi. Aspernatur, dicta?
+      <Gallery 
+      photos={[
+        {id: 1, src: "/photos/1.jpg", preview: "/photos/preview/1.jpg", description: "photo 1"},
+        {id: 2, src: "/photos/2.jpg", preview: "/photos/preview/2.jpg", description: "photo 2"},
+        {id: 3, src: "/photos/3.jpg", preview: "/photos/preview/3.jpg", description: "photo 3"},
+        {id: 4, src: "/photos/4.jpg", preview: "/photos/preview/4.jpg", description: "photo 4"},
+        {id: 5, src: "/photos/5.jpg", preview: "/photos/preview/5.jpg", description: "photo 5"},
+        {id: 6, src: "/photos/6.jpg", preview: "/photos/preview/6.jpg", description: "photo 6"},
+        {id: 7, src: "/photos/7.jpg", preview: "/photos/preview/7.jpg", description: "photo 7"},
+      ]} />
     </>
   )
 }
 
-export default App
+export default App;
