@@ -12,7 +12,7 @@ interface GalleryProps {
 export const Gallery: React.FC<GalleryProps> = ({ photos }) => {
 
    const [indexActivePhoto, setIndexActivePhoto] = React.useState(0);
-   const activePhoto = photos[indexActivePhoto];
+   /* const activePhoto = photos[indexActivePhoto]; */
    const prevPhoto = photos[indexActivePhoto - 1];
    const nextPhoto = photos[indexActivePhoto + 1];
 
@@ -25,9 +25,8 @@ export const Gallery: React.FC<GalleryProps> = ({ photos }) => {
       <div className={style.gallery}>
          <div className={style.galleryWrapper}>
             <MainPhoto 
-               prevPhoto={prevPhoto}
-               activePhoto={activePhoto}
-               nextPhoto={nextPhoto}
+               photos={photos}
+               indexActivePhoto={indexActivePhoto}
             />
             <Navigation
                className={style.galleryNavigation}
