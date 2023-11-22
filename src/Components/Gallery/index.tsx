@@ -28,10 +28,9 @@ export const Gallery: React.FC<GalleryProps> = ({ photos }) => {
                prevPhoto={prevPhoto}
                activePhoto={activePhoto}
                nextPhoto={nextPhoto}
-               className={style.mainPhoto}
             />
             <Navigation
-               className={style.navigation}
+               className={style.galleryNavigation}
                disabledPrev={!prevPhoto}
                disabledNext={!nextPhoto}
                onPrevClick={() => {
@@ -45,7 +44,7 @@ export const Gallery: React.FC<GalleryProps> = ({ photos }) => {
          <PreviewGallery 
             activePhotoIndex={indexActivePhoto}
             photos={photos}
-            className={style.previewList}
+            className={style.galleryPreviewList}
          />
       </div>
    )
