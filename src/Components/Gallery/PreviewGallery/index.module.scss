@@ -45,6 +45,21 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font: 24px/1 Georgia;
+      font: 24px/1 'Baskervville';
+   }
+}
+
+@media (max-width: 640px) {
+   .previewGallery {
+      width: 100%;
+            
+      &Track {
+         display: none;
+      }
+
+      &Cover {
+         position: relative;
+
+      }
    }
 }

@@ -4,6 +4,8 @@
    &Wrapper {
       position: relative;
       margin-bottom: 5px;
+      display: flex;
+      flex-direction: column;
    }
 
    &Navigation {
@@ -16,5 +18,21 @@
 
    &PreviewList {
       margin: 0 auto;
+   }
+}
+
+@media (max-width: 640px) { 
+
+   .gallery {
+      &Navigation {
+         position: relative;
+         bottom: 0;
+         margin-top: 10px;
+      }
+
+      &PreviewList {
+         position: absolute;
+         bottom: 35px;
+      }
    }
 }
